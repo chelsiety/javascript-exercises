@@ -1,24 +1,15 @@
-// Function expression
-
-
 const repeatString = function(aString, stringMultiplier) {
-    let appendedString = ""
+    let appendedString = '';
 
     if (stringMultiplier === 0){
-        return ''
+        return '';
+    } else if (stringMultiplier < 0){
+        return 'ERROR';
+    } else if (stringMultiplier > 0){
+        for(let i = 0; i < stringMultiplier; i++){
+            appendedString += aString;
+        } return appendedString;
     }
-    else if (stringMultiplier < 0){
-        return 'ERROR'
-    }
-    else if (stringMultiplier > 0){
-
-    
-    for(let i = 0; i < stringMultiplier; i++){
-        appendedString += aString
-    }
-    return appendedString
-    }
-
 };
 
 // Do not edit below this line
